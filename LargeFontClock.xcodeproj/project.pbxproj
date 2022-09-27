@@ -11,6 +11,7 @@
 		EA5A7F3B28E28F8F00D20AEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A7F3A28E28F8F00D20AEB /* ContentView.swift */; };
 		EA5A7F3D28E28F9100D20AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5A7F3C28E28F9100D20AEB /* Assets.xcassets */; };
 		EA5A7F4028E28F9100D20AEB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5A7F3F28E28F9100D20AEB /* Preview Assets.xcassets */; };
+		EA5A7F4828E2904200D20AEB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA5A7F4A28E2904200D20AEB /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		EA5A7F3A28E28F8F00D20AEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA5A7F3C28E28F9100D20AEB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5A7F3F28E28F9100D20AEB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA5A7F4928E2904200D20AEB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA5A7F4B28E2904900D20AEB /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +56,7 @@
 			children = (
 				EA5A7F3828E28F8F00D20AEB /* LargeFontClockApp.swift */,
 				EA5A7F3A28E28F8F00D20AEB /* ContentView.swift */,
+				EA5A7F4A28E2904200D20AEB /* Localizable.strings */,
 				EA5A7F3C28E28F9100D20AEB /* Assets.xcassets */,
 				EA5A7F3E28E28F9100D20AEB /* Preview Content */,
 			);
@@ -109,6 +113,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = EA5A7F2C28E28F8F00D20AEB;
 			productRefGroup = EA5A7F3628E28F8F00D20AEB /* Products */;
@@ -126,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5A7F4028E28F9100D20AEB /* Preview Assets.xcassets in Resources */,
+				EA5A7F4828E2904200D20AEB /* Localizable.strings in Resources */,
 				EA5A7F3D28E28F9100D20AEB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +149,18 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA5A7F4A28E2904200D20AEB /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA5A7F4928E2904200D20AEB /* en */,
+				EA5A7F4B28E2904900D20AEB /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		EA5A7F4128E28F9100D20AEB /* Debug */ = {
@@ -195,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -270,17 +288,18 @@
 				DEVELOPMENT_TEAM = JP7KK6H7PF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Large Font Clock";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.LargeFontClock;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.horologe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -299,17 +318,18 @@
 				DEVELOPMENT_TEAM = JP7KK6H7PF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Large Font Clock";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.LargeFontClock;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.horologe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

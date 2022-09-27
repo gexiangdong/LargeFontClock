@@ -11,7 +11,11 @@ import SwiftUI
 struct LargeFontClockApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+          ContentView().frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            .background(Color.black)
+                     .edgesIgnoringSafeArea(.all)
+                     .statusBar(hidden: true)
+
         }
     }
 }

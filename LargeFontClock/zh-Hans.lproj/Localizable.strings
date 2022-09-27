@@ -1,0 +1,20 @@
+/*
+  Localizable.strings
+  clock
+
+  Created by GeXiangDong on 2022/9/24.
+  
+*/
+"Cancel" = "取消";
+"OK" = "确定";
+"Save" = "保存";
+"Done" = "完成";
+"Settings" = "设置";
+"24 Hours" = "24小时制";
+"Show Seconds" = "显示秒";
+"Show Date" = "显示日期";
+"Landspace only" = "仅横屏时";
+"All" = "显示";
+"None" = "不显示";
+"PM" = "下午";
+"AM" = "上午";
