@@ -21,6 +21,7 @@ struct ContentView: View {
   let TWENTY_FOUR_HOUR_KEY = "twenty_four_key"
   let SHOW_SECOND_KEY = "show_second"
   let PARAMETER_KEY = "clock_parameter"
+  let CLOCK_BRIGHTNESS = 0.1;
   
   @State private var timeFont:Font = Font.largeTitle
   @State private var timeSepatorColor = Color.white
@@ -76,6 +77,14 @@ struct ContentView: View {
           .padding(.bottom, 40) //avoid not safe area bottom
       }
     }
+    .onReceive(NotificationCenter.default.publisher(for: UIApplication.willResignActiveNotification)) { _ in
+      //            print("To the background!")
+      clockDisappear()
+    }
+    .onReceive(NotificationCenter.default.publisher(for: UIApplication.willEnterForegroundNotification)) { _ in
+      //        print("To the foreground!")
+      clockAppear()
+    }
     .onReceive(timer) { _ in
       let now = Date()
       self.dateNow = dateFormatter.string(from: now)
@@ -121,13 +130,12 @@ struct ContentView: View {
       }
       
       calTimeFont()
-      UIApplication.shared.isIdleTimerDisabled = true  //disable idel and lock screen
       self.brightness = UIScreen.main.brightness
-//      UIScreen.main.brightness = 0
+      clockAppear()
     })
     .onDisappear(perform: {
       print("onDisappear")
-//      UIScreen.main.brightness = self.brightness
+      clockDisappear()
     })
     .onRotate { newOrientation in
       self.orientation = newOrientation
@@ -153,7 +161,7 @@ struct ContentView: View {
             saveParameters()
           }
           VStack(alignment: .leading, spacing: 20) {
-            Text("Show Seconds").bold()
+            Text("Show Seconds")
             Picker("Show Seconds", selection: $parameter.showSecond) {
               Text("Landspace only").tag(1)
               Text("All").tag(2)
@@ -167,12 +175,21 @@ struct ContentView: View {
         }
       }
       .onAppear(perform: {
-//        UIScreen.main.brightness = brightness
+        clockDisappear()
       })
       .navigationBarTitle("Settings", displayMode: .inline)
       .navigationBarItems( trailing: Button("Done", action: { closeSettingSheet() })
       )
     }
+  }
+  
+  func clockAppear(){
+    UIScreen.main.brightness = CLOCK_BRIGHTNESS
+    UIApplication.shared.isIdleTimerDisabled = true  //disable idel and lock screen
+  }
+  func clockDisappear(){
+    UIScreen.main.brightness = brightness  //恢复原有设定亮度
+    UIApplication.shared.isIdleTimerDisabled = false  //enable idel and lock screen
   }
   
   func saveParameters() {
@@ -205,7 +222,7 @@ struct ContentView: View {
   
   private func didDismiss(){
     print("settingSheet dismiss")
-//    UIScreen.main.brightness = 0
+    clockAppear()
   }
   
   private func closeSettingSheet(){

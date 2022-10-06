@@ -1,0 +1,8 @@
+/* 
+  InfoPlist.strings
+  LargeFontClock
+
+  Created by GeXiangDong on 2022/10/6.
+ 全画面大文字時計
+*/
+"CFBundleDisplayName" = "大文字時計";

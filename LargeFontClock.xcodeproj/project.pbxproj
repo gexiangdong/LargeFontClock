@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA38A21428EEF33700374782 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA38A21628EEF33700374782 /* InfoPlist.strings */; };
 		EA5A7F3928E28F8F00D20AEB /* LargeFontClockApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A7F3828E28F8F00D20AEB /* LargeFontClockApp.swift */; };
 		EA5A7F3B28E28F8F00D20AEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5A7F3A28E28F8F00D20AEB /* ContentView.swift */; };
 		EA5A7F3D28E28F9100D20AEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5A7F3C28E28F9100D20AEB /* Assets.xcassets */; };
@@ -15,6 +16,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA38A21328EEF32400374782 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EA38A21528EEF33700374782 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA38A21728EEF33B00374782 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		EA38A21828EEF33C00374782 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EA5A7F3528E28F8F00D20AEB /* LargeFontClock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LargeFontClock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5A7F3828E28F8F00D20AEB /* LargeFontClockApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeFontClockApp.swift; sourceTree = "<group>"; };
 		EA5A7F3A28E28F8F00D20AEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -59,6 +64,7 @@
 				EA5A7F4A28E2904200D20AEB /* Localizable.strings */,
 				EA5A7F3C28E28F9100D20AEB /* Assets.xcassets */,
 				EA5A7F3E28E28F9100D20AEB /* Preview Content */,
+				EA38A21628EEF33700374782 /* InfoPlist.strings */,
 			);
 			path = LargeFontClock;
 			sourceTree = "<group>";
@@ -114,6 +120,7 @@
 				en,
 				Base,
 				"zh-Hans",
+				ja,
 			);
 			mainGroup = EA5A7F2C28E28F8F00D20AEB;
 			productRefGroup = EA5A7F3628E28F8F00D20AEB /* Products */;
@@ -131,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5A7F4028E28F9100D20AEB /* Preview Assets.xcassets in Resources */,
+				EA38A21428EEF33700374782 /* InfoPlist.strings in Resources */,
 				EA5A7F4828E2904200D20AEB /* Localizable.strings in Resources */,
 				EA5A7F3D28E28F9100D20AEB /* Assets.xcassets in Resources */,
 			);
@@ -151,11 +159,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		EA38A21628EEF33700374782 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA38A21528EEF33700374782 /* en */,
+				EA38A21728EEF33B00374782 /* zh-Hans */,
+				EA38A21828EEF33C00374782 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EA5A7F4A28E2904200D20AEB /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EA5A7F4928E2904200D20AEB /* en */,
 				EA5A7F4B28E2904900D20AEB /* zh-Hans */,
+				EA38A21328EEF32400374782 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -301,6 +320,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.horologe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -331,6 +353,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.devmgr.horologe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

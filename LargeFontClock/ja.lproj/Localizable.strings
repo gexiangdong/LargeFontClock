@@ -1,0 +1,20 @@
+/*
+  Localizable.strings
+  clock
+
+  Created by GeXiangDong on 2022/9/24.
+  
+*/
+"Cancel" = "キャンセル";
+"OK" = "OK";
+"Save" = "保存";
+"Done" = "完了";
+"Settings" = "設定";
+"24 Hours" = "24 時間";
+"Show Seconds" = "秒を表示する";
+"Show Date" = "日付を表示する";
+"Landspace only" = "ランドスペースのみ";
+"All" = "すべて";
+"None" = "なし";
+"PM" = "午後";
+"AM" = "午前";
